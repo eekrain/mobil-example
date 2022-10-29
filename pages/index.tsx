@@ -8,13 +8,13 @@ export default function Home() {
       <Layout>
         <div>
           {mobil.list.map((val) => (
-            <Box marginY={"4"}>
+            <Box marginY={"4"} key={val.nama + val.merk}>
               <Box color={"blue.700"} fontWeight="bold" marginBottom={"4"}>
                 {val.nama}
               </Box>
               <HStack align={"stretch"}>
                 {val.gallery?.map((urlimg) => (
-                  <img src={urlimg} alt="mobil" />
+                  <img src={urlimg} alt="mobil" key={urlimg} />
                 ))}
               </HStack>
               <Box color={"blue.700"} fontWeight="bold">
